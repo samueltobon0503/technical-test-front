@@ -3,7 +3,7 @@
 Este proyecto corresponde al frontend desarrollado en Angular para una prueba técnica.
 
 ## Requisitos
-- Node.js (versión recomendada: 18 o superior)
+- Node.js (versión recomendada: 20 o superior)
 - Angular CLI
 
 ## Ejecución del proyecto

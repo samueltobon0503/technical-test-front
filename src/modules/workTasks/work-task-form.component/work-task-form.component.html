@@ -4,12 +4,12 @@
       <div class="flex justify-between items-center">
         <div class="a">
           <mat-card-title>
-            <b class="text-2xl text-primary">{{ currentMode === 'create' ? 'Crear Tarea' : 'Editar Tarea' }}</b>
+            <b class="text-2xl text-primary">{{
+              currentMode === 'create' ? 'Crear Tarea' : 'Editar Tarea'
+            }}</b>
           </mat-card-title>
           <mat-card-subtitle>
-            <p class="text-gray-500 mt-2">
-              Panel para la gestión de las tareas empresariales
-            </p>
+            <p class="text-gray-500 mt-2">Panel para la gestión de las tareas empresariales</p>
           </mat-card-subtitle>
         </div>
         <div class="flex">
@@ -57,18 +57,18 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <div class="flex items-center gap-3 p-3">
-          <button
-            mat-flat-button
-            color="primary"
-            class="text-lg"
-            [disabled]="!taskCategoryId()"
-            (click)="submit()"
-          >
-            <mat-icon class="mr-2">send</mat-icon>
-            Enviar
-          </button>
-        </div>
+      </div>
+      <div class="flex items-center gap-3 p-3">
+        <button
+          mat-flat-button
+          color="primary"
+          class="text-lg"
+          [disabled]="!taskCategoryId()"
+          (click)="submit()"
+        >
+          <mat-icon class="mr-2">send</mat-icon>
+          Enviar
+        </button>
       </div>
     </mat-card-content>
   </mat-card>
