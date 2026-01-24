@@ -1,1 +1,16 @@
-<router-outlet />
+<div class="flex flex-col h-screen w-full overflow-hidden bg-gray-100">
+  <nav class="w-full bg-slate-800 py-4 px-6 flex items-center justify-between shadow-sm">
+    <div class="flex items-center gap-2">
+      <span class="text-white font-bold text-2xl tracking-wide">Empresa ejemplo S.A.S</span>
+    </div>
+
+    <span class="text-slate-400 text-lg">
+      Bienvenido de nuevo, Administrador
+    </span>
+  </nav>
+
+  <main class="flex-grow bg-gray-100">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

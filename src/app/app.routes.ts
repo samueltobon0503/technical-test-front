@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
+import { RoutesEnum } from '../shared/Dictionary.enum';
 
 export const routes: Routes = [
-  {path: '', redirectTo: 'work-tasks', pathMatch: 'full', title: 'Home' },
-  {path: 'work-tasks', loadChildren: () => import('../modules/workTasks/work-tasks.routes'), title: 'Work Tasks' }
+  {path: '', redirectTo: RoutesEnum.WORK_TASK, pathMatch: 'full', title: 'Home' },
+  {path: RoutesEnum.WORK_TASK, loadChildren: () => import('../modules/workTasks/work-tasks.routes'), title: 'Tareas' },
+  {path: RoutesEnum.CATEGORIES, loadChildren: () => import('../modules/categories/categories.routes'), title: 'Categorias' }
 ];

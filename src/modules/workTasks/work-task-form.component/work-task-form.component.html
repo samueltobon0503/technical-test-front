@@ -1,0 +1,75 @@
+<div class="flex justify-center bg-gray-100 p-4">
+  <mat-card appearance="outlined" class="w-11/12 p-6 shadow-lg">
+    <mat-card-header class="flex flex-col mb-4">
+      <div class="flex justify-between items-center">
+        <div class="a">
+          <mat-card-title>
+            <b class="text-2xl text-primary">{{ currentMode === 'create' ? 'Crear Tarea' : 'Editar Tarea' }}</b>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <p class="text-gray-500 mt-2">
+              Panel para la gestión de las tareas empresariales
+            </p>
+          </mat-card-subtitle>
+        </div>
+        <div class="flex">
+          <button mat-flat-button color="primary" class="text-lg" (click)="goBack()">
+            <mat-icon class="mr-2">arrow_back</mat-icon>
+            Volver
+          </button>
+        </div>
+      </div>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="flex gap-3">
+        <div class="flex gap-3 py-3">
+          <mat-form-field class="example-full-width" subscriptSizing="dynamic">
+            <mat-label>Nombre</mat-label>
+            <input matInput value="Sushi" [(ngModel)]="taskTitle" />
+          </mat-form-field>
+        </div>
+        <div class="flex gap-3 p-3">
+          <mat-form-field class="example-full-width" subscriptSizing="dynamic">
+            <mat-label>Estado</mat-label>
+            <mat-select [(ngModel)]="taskStatus">
+              @for (status of statusOptions; track $index) {
+                <mat-option [value]="status.value">{{ status.label }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="flex gap-3 p-3">
+          <mat-form-field class="example-full-width" subscriptSizing="dynamic">
+            <mat-label>Fecha de vencimiento</mat-label>
+            <input matInput [matDatepicker]="picker" value="Sushi" [(ngModel)]="taskDueDate" />
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="flex gap-3 p-3">
+          <mat-form-field class="example-full-width" subscriptSizing="dynamic">
+            <mat-label>Categoría</mat-label>
+            <mat-select [(ngModel)]="taskCategoryId">
+              @for (category of categories; track $index) {
+                <mat-option [value]="category.id">{{ category.name }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="flex items-center gap-3 p-3">
+          <button
+            mat-flat-button
+            color="primary"
+            class="text-lg"
+            [disabled]="!taskCategoryId()"
+            (click)="submit()"
+          >
+            <mat-icon class="mr-2">send</mat-icon>
+            Enviar
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
