@@ -22,9 +22,9 @@ pipeline {
 
         script {
           if (isUnix()) {
-            sh 'ng test'
+            sh 'npx vitest run'
           } else {
-            bat 'ng test'
+            bat 'npx vitest run'
           }
         }
       }
