@@ -22,9 +22,9 @@ pipeline {
 
         script {
           if (isUnix()) {
-            sh 'npx vitest run'
+            sh 'npx ng test --watch=false --browsers=ChromeHeadless'
           } else {
-            bat 'npx vitest run'
+            bat 'npx ng test --watch=false --browsers=ChromeHeadless'
           }
         }
       }

@@ -3,6 +3,7 @@ import { WorkTasksComponent } from './work-tasks.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideRouter } from '@angular/router';
+import { describe, it, expect, beforeEach } from 'vitest';
 
 describe('WorkTasksComponent', () => {
   let component: WorkTasksComponent;
