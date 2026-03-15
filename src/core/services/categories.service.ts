@@ -1,6 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../config/enviroment';
+import { DataResponse } from '../models/DataResponse';
+import { WorkTaskModel } from '../models/work-task/WorkTaskModel';
+import { CreateCategoryModel } from '../models/category/CreateCategoryModel';
+import { CategoryModel } from '../models/category/CategoryModel';
 
 @Injectable({
   providedIn: 'root'

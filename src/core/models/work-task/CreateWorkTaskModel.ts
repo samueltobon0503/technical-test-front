@@ -1,4 +1,4 @@
-interface CreateWorkTaskModel{
+export interface CreateWorkTaskModel{
   title: string,
   status: number | null,
   dueDate: Date | null,

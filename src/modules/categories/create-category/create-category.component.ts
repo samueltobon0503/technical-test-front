@@ -10,6 +10,7 @@ import { CategoryService } from '../../../core/services/categories.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RoutesEnum } from '../../../shared/Dictionary.enum';
+import { CreateCategoryModel } from '../../../core/models/category/CreateCategoryModel';
 
 @Component({
   selector: 'app-create-category-component',

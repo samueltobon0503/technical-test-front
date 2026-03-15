@@ -1,4 +1,6 @@
-interface WorkTaskModel{
+import { CategoryModel } from "../category/CategoryModel";
+
+export interface WorkTaskModel{
   id: string,
   title: string,
   status: number,

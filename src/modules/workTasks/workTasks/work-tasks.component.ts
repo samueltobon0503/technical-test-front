@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { RoutesEnum, TASK_STATUS_LABELS } from '../../../shared/Dictionary.enum';
 import { CommonModule } from '@angular/common';
+import { WorkTaskModel } from '../../../core/models/work-task/WorkTaskModel';
 
 @Component({
   selector: 'app-work-tasks.component',

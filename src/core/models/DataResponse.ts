@@ -1,6 +1,6 @@
 interface IEntity{};
 
-interface DataResponse<T extends IEntity>{
+export interface DataResponse<T extends IEntity>{
   statusCode: number,
   success: boolean,
   message: string,

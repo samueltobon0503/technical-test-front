@@ -1,4 +1,4 @@
-interface UpdateWorkTaskModel{
+export interface UpdateWorkTaskModel{
   id: string,
   title: string,
   status: number | null,

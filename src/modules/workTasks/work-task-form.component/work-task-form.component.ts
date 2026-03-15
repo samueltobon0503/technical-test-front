@@ -13,6 +13,9 @@ import { WorkTaskService } from '../../../core/services/work-task.service';
 import { CategoryService } from '../../../core/services/categories.service';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { CategoryModel } from '../../../core/models/category/CategoryModel';
+import { CreateWorkTaskModel } from '../../../core/models/work-task/CreateWorkTaskModel';
+import { UpdateWorkTaskModel } from '../../../core/models/work-task/UpdateWorkTaskModel';
 
 @Component({
   selector: 'app-work-task-form.component',
