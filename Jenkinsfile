@@ -22,9 +22,9 @@ pipeline {
 
         script {
           if (isUnix()) {
-            sh 'npx ng test --watch=false --browsers=ChromeHeadless'
+            sh 'npx ng test --watch=false'
           } else {
-            bat 'npx ng test --watch=false --browsers=ChromeHeadless'
+            bat 'npx ng test --watch=false'
           }
         }
       }
